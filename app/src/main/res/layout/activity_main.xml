@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="36dp"
+            android:text="Recepcion  PWM"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/IdPotenciometro" />
+
+        <TextView
+            android:id="@+id/IdNumeroPwm"
+            android:layout_width="38dp"
+            android:layout_height="22dp"
+            android:gravity="center"
+            android:text="0"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.463"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <SeekBar
+            android:id="@+id/IdSeekBar"
+            style="@style/Widget.AppCompat.SeekBar"
+            android:layout_width="326dp"
+            android:layout_height="23dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:max="255"
+            android:progress="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/IdNumeroPwm" />
+
+        <com.jjoe64.graphview.GraphView
+            android:id="@+id/graph"
+            android:layout_width="314dp"
+            android:layout_height="137dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.089"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/IdTeclado" />
+
+        <EditText
+            android:id="@+id/IdEnviarLcd"
+            android:layout_width="236dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="Enviar Lcd"
+            android:inputType="textPersonName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="149dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="192dp"
+            android:text="Datos del teclado "
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/IdTeclado"
+            android:layout_width="314dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="20dp"
+            android:background="@android:color/darker_gray"
+            android:textColor="#2A2DBD"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <TextView
+            android:id="@+id/IdPotenciometro"
+            android:layout_width="332dp"
+            android:layout_height="18dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Voltaje:"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/graph" />
+
+        <Button
+            android:id="@+id/IdEnviar"
+            android:layout_width="86dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="24dp"
+            android:text="Enviar"
+            app:layout_constraintStart_toEndOf="@+id/IdEnviarLcd"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/IdLimpiar"
+            android:layout_width="89dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="268dp"
+            android:layout_marginLeft="268dp"
+            android:layout_marginTop="24dp"
+            android:text="Limpiar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/IdEnviar2" />
+
+        <Button
+            android:id="@+id/IdEnviar2"
+            android:layout_width="84dp"
+            android:layout_height="41dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="16dp"
+            android:text="enviar"
+            app:layout_constraintStart_toEndOf="@+id/IdEnviarLcd2"
+            app:layout_constraintTop_toBottomOf="@+id/IdEnviar" />
+
+        <EditText
+            android:id="@+id/IdEnviarLcd2"
+            android:layout_width="238dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="Enviar Lcd"
+            android:inputType="textPersonName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/IdEnviarLcd" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
